@@ -4,6 +4,11 @@ const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
+// Models
+const Users = React.lazy(() => import('./views/models/users/Users'))
+const Position = React.lazy(() => import('./views/models/position/Positions') )
+const Departments = React.lazy(() => import('./views/models/departments/Departments') )
+
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
@@ -53,6 +58,10 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
+  { path: '/models', name: 'Models', element: Colors },
+  { path: '/models/users', name: 'Users', element: Users },
+  { path: '/models/positions', name: 'Positions', element: Position },
+  { path: '/models/departments', name: 'Departments', element: Departments },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },

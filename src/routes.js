@@ -9,6 +9,11 @@ const Users = React.lazy(() => import('./views/models/users/Users'))
 const Position = React.lazy(() => import('./views/models/position/Positions') )
 const Departments = React.lazy(() => import('./views/models/departments/Departments') )
 
+
+// User
+const UserEdit = React.lazy(() => import('./views/models/users/UserEdit'))
+
+
 // Base
 const Accordion = React.lazy(() => import('./views/base/accordion/Accordion'))
 const Breadcrumbs = React.lazy(() => import('./views/base/breadcrumbs/Breadcrumbs'))
@@ -60,6 +65,7 @@ const routes = [
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/models', name: 'Models', element: Colors },
   { path: '/models/users', name: 'Users', element: Users },
+  { path: '/models/users/edit:id', name: 'User-Edit', element: UserEdit },
   { path: '/models/positions', name: 'Positions', element: Position },
   { path: '/models/departments', name: 'Departments', element: Departments },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
